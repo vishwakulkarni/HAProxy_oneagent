@@ -1,0 +1,143 @@
+WARNING:oneagent_sdk.plugin_simulator:Unable to find pluguin configuration file, assuming emtpy config
+Traceback (most recent call last):
+  File "/home/vishy-pc/.local/lib/python3.6/site-packages/oneagent_sdk/plugin_simulator.py", line 311, in get_plugin_properties
+    with open(properties_path) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/ruxit.python.haproxy/properties.json'
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00023114999930839986, engines_info: [], 
+INFO:plugin_development.global:{}
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00026053499823319726, engines_info: [], 
+INFO:plugin_development.global:{}
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.005', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00024731200028327294, engines_info: [], 
+INFO:plugin_development.global:{}
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.007', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.007', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.007', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.007', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.007', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00032287299836752936, engines_info: [], 
+INFO:plugin_development.global:{}
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.0005203480031923391, engines_info: [], 
+INFO:plugin_development.global:{}
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00033561499731149524, engines_info: [], 
+INFO:plugin_development.global:{}
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.0002356890036026016, engines_info: [], 
+INFO:plugin_development.global:{}
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt
+INFO:ruxit.plugin_loop:Installing plugins with conflict resolution
+INFO:ruxit.package_utils.plugin_updater:Unable to get revision from plugin_directory_path '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy', assuming -1
+INFO:ruxit.package_utils.plugin_updater:plugins_by_revision: defaultdict(<class 'dict'>,
+            {'no_revision': {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}})
+INFO:ruxit.package_utils.plugin_updater:Installing plugins
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'no_revision'
+INFO:ruxit.package_utils.plugin_updater:Processing candidate_entries: {'custom.python.haproxy': PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')}
+INFO:ruxit.package_utils.plugin_updater:Working set validated, new current_entries: OrderedDict([('custom.python.haproxy',
+              PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy'))])
+INFO:ruxit.package_utils.plugin_updater:Plugin PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy') from revision 'no_revision' compatible
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_deployment'
+INFO:ruxit.package_utils.plugin_updater:Processing revision 'plugin_development'
+INFO:ruxit.plugin_loop:========= INCOMPATIBLE PLUGINS =========
+INFO:ruxit.plugin_loop:[]
+INFO:ruxit.plugin_loop:========================================
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:[PluginInfo(name='custom.python.haproxy', reported_name='custom.python.haproxy', version='2.010', directory='/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy'  package='custom_haproxy')]
+INFO:ruxit.plugin_loop:****************************************
+INFO:ruxit.plugin_loop:sys.path after installing plugins: ['/home/vishy-pc/.local/bin', '/usr/lib/python36.zip', '/usr/lib/python3.6', '/usr/lib/python3.6/lib-dynload', '/home/vishy-pc/.local/lib/python3.6/site-packages', '/usr/local/lib/python3.6/dist-packages', '/usr/lib/python3/dist-packages', '/home/vishy-pc/Downloads/dynatrace-service-plugins/custom-python-haproxy/custom.python.haproxy']
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.0002375170006416738, engines_info: [], 
+INFO:plugin_development.global:{}
+INFO:ruxit.plugin_loop:Plugin loop status: time_taken: 0.00021678100165445358, engines_info: [], 
+INFO:plugin_development.global:{}
+WARNING:oneagent_sdk.plugin_simulator:Plugin simulator was stopped with a Keyboard interrupt

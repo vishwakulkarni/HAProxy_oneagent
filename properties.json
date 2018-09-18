@@ -1,0 +1,5 @@
+{
+    "url":"http://localhost:9000?haproxy_stats",
+    "auth_user":"admin",
+    "auth_password":"admin"
+}

@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "process_type": 32,
+      "group_name": "custom.python.haproxy",
+      "processes": [
+        {
+          "process_name": "unknown",
+          "properties": {
+            "ListeningPorts": "80"
+          }
+        }
+      ]
+    }
+  ]
+}

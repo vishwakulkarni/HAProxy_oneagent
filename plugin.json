@@ -1,0 +1,472 @@
+{
+  "version": "2.010",
+  "name": "custom.python.haproxy",
+  "requiredAgentVersion": "1.113.0",
+  "type": "python",
+  "processTypes": [32],
+  "technologies": ["HAProxy"],
+  "entity": "PROCESS_GROUP_INSTANCE",
+  "ui": {
+    "pgmetrics": [
+      {
+        "key": "be_scur",
+        "displayname": "Current backend sessions",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "fe_scur",
+        "displayname": "Current frontend sessions",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "fe_ereq",
+        "displayname": "Requests errors",
+        "mergeaggregation": "sum",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "be_qcur",
+        "displayname": "Queued requests",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "be_econ",
+        "displayname": "Connection errors",
+        "mergeaggregation": "sum",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "be_eresp",
+        "displayname": "Response errors",
+        "mergeaggregation": "sum",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "hrsp_4xx",
+        "displayname": "4xx errors",
+        "mergeaggregation": "sum",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "hrsp_5xx",
+        "displayname": "5xx errors",
+        "mergeaggregation": "sum",
+        "unit": "PerMinute"
+      },
+      {
+        "key": "be_susage",
+        "displayname": "Session usage backend",
+        "unit": "Percent"
+      },
+      {
+        "key": "fe_susage",
+        "displayname": "Session usage frontend",
+        "unit": "Percent"
+      },
+      {
+        "key": "be_rtime",
+        "displayname": "Response time",
+        "unit": "MilliSecond"
+      },
+      {
+        "key": "idle",
+        "displayname": "Standby time",
+        "unit": "Percent"
+      }
+    ],
+    "keyMetrics": [
+      {
+        "key": "fe_req_rate",
+        "aggregation": "avg",
+        "mergeaggregation": "avg",
+        "displayname": "Requests"
+      },
+      {
+        "key": "be_econ",
+        "aggregation": "avg",
+        "mergeaggregation": "sum",
+        "displayname": "Errors"
+      }
+    ],
+    "keyCharts": [
+      {
+        "group": "HAProxy metrics",
+        "title": "Idle time",
+        "series": [
+          {
+            "key": "idle",
+            "displayname": "Idle",
+            "unit": "Percent"
+          }
+        ]
+      },
+      {
+        "title": "Throughput",
+        "group": "HAProxy metrics",
+        "series": [
+          {
+            "key": "fe_req_rate",
+            "displayname": "Requests",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "be_rtime",
+            "displayname": "Response time",
+            "mergeaggregation": "avg",
+            "unit": "MilliSecond",
+            "rightaxis": true
+          },
+          {
+            "key": "scur",
+            "displayname": "Sessions",
+            "mergeaggregation": "sum"
+          }
+        ]
+      },
+      {
+        "title": "Transfer",
+        "group": "HAProxy metrics",
+        "series": [
+          {
+            "key": "bin",
+            "displayname": "Received",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "bout",
+            "displayname": "Sent",
+            "mergeaggregation": "sum"
+          }
+        ]
+      },
+      {
+        "title": "Errors",
+        "group": "HAProxy metrics",
+        "series": [
+          {
+            "key": "fe_ereq",
+            "displayname": "Request errors",
+            "color": "rgba(224, 244, 252, 0.8)",
+            "seriestype": "bar",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "be_econ",
+            "displayname": "Connection errors",
+            "color": "rgba(130, 216, 249, 0.8)",
+            "seriestype": "bar",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "be_eresp",
+            "displayname": "Response errors",
+            "color": "rgba(42, 182, 244, 0.8)",
+            "seriestype": "bar",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "hrsp_4xx",
+            "displayname": "HTTP 4xx errors",
+            "color": "rgba(0, 140, 219, 0.8)",
+            "seriestype": "bar",
+            "mergeaggregation": "sum"
+          },
+          {
+            "key": "hrsp_5xx",
+            "displayname": "HTTP 5xx errors",
+            "color": "rgba(0, 73, 153, 0.8)",
+            "seriestype": "bar",
+            "mergeaggregation": "sum"
+          }
+        ]
+      }
+    ],
+    "charts": [
+      {
+        "group": "Requests",
+        "title": "Request rate",
+        "series": [
+          {
+            "key": "fe_req_rate",
+            "displayname": "Requests"
+          }
+        ]
+      },
+      {
+        "group": "Requests",
+        "title": "Queue",
+        "series": [
+          {
+            "key": "be_qcur",
+            "displayname": "Queued requests"
+          }
+        ]
+      },
+      {
+        "group": "Errors",
+        "title": "Errors",
+        "series": [
+          {
+            "key": "fe_ereq",
+            "displayname": "Request errors",
+            "color": "rgba(224, 244, 252, 0.8)",
+            "seriestype": "bar"
+          },
+          {
+            "key": "be_econ",
+            "displayname": "Connection errors",
+            "color": "rgba(130, 216, 249, 0.8)",
+            "seriestype": "bar"
+          },
+          {
+            "key": "be_eresp",
+            "displayname": "Response errors",
+            "color": "rgba(42, 182, 244, 0.8)",
+            "seriestype": "bar"
+          },
+          {
+            "key": "hrsp_4xx",
+            "displayname": "HTTP 4xx errors",
+            "color": "rgba(0, 140, 219, 0.8)",
+            "seriestype": "bar"
+          },
+          {
+            "key": "hrsp_5xx",
+            "displayname": "HTTP 5xx errors",
+            "color": "rgba(0, 73, 153, 0.8)",
+            "seriestype": "bar"
+          }
+        ]
+      },
+      {
+        "group": "Sessions",
+        "title": "Sessions",
+        "series": [
+          {
+            "key": "be_scur",
+            "displayname": "Current backend sessions"
+          },
+          {
+            "key": "be_susage",
+            "displayname": "Backend session usage",
+            "color": "#004999",
+            "unit": "Percent",
+            "rightaxis": true
+          },
+          {
+            "key": "fe_scur",
+            "displayname": "Current frontend sessions"
+          },
+          {
+            "key": "fe_susage",
+            "displayname": "Frontend session usage",
+            "color": "#004999",
+            "unit": "Percent",
+            "rightaxis": true
+          }
+        ]
+      },
+      {
+        "group": "Bytes",
+        "title": "Bytes backend",
+        "series": [
+          {
+            "key": "be_bin",
+            "displayname": "Received",
+            "color": "rgba(0,85,142,0.2)"
+          },
+          {
+            "key": "be_bout",
+            "displayname": "Sent",
+            "color": "rgba(0,166,251,0.4)"
+          }
+        ]
+      },
+      {
+        "group": "Bytes",
+        "title": "Bytes frontend",
+        "series": [
+          {
+            "key": "fe_bin",
+            "displayname": "Received",
+            "color": "rgba(0,85,142,0.2)"
+          },
+          {
+            "key": "fe_bout",
+            "displayname": "Sent",
+            "color": "rgba(0,166,251,0.4)"
+          }
+        ]
+      }
+    ]
+  },
+  "source": {
+    "package": "custom_haproxy",
+    "className": "HaProxyPlugin",
+    "install_requires": ["requests>=2.6.0"]
+  },
+  "configUI": {
+    "displayName": "Service Fabrik HAProxy"
+  },
+  "metrics": [
+    {
+      "timeseries": {
+        "key": "fe_ereq",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Request errors"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "fe_scur",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Current frontend sessions"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "fe_susage",
+        "unit": "Percent",
+        "dimensions": ["service"],
+        "displayname": "Session usage frontend"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "fe_req_rate",
+        "unit": "PerSecond",
+        "dimensions": ["service"],
+        "displayname": "Requests"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_econ",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Connection errors"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_eresp",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Response errors"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_qcur",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Queued requests"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_scur",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Current backend sessions"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "scur",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "Sessions"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_susage",
+        "unit": "Percent",
+        "dimensions": ["service"],
+        "displayname": "Session usage backend"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_bin",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Backend bytes received"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_bout",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Backend bytes sent"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "bin",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Bytes received"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "bout",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Bytes sent"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "fe_bin",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Frontend bytes received"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "fe_bout",
+        "unit": "BytePerMinute",
+        "dimensions": ["service"],
+        "displayname": "Frontend bytes sent"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "hrsp_4xx",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "HTTP 4xx errors"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "hrsp_5xx",
+        "unit": "PerMinute",
+        "dimensions": ["service"],
+        "displayname": "HTTP 5xx errors"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "be_rtime",
+        "unit": "MilliSecond",
+        "dimensions": ["service"],
+        "displayname": "Response time"
+      }
+    },
+    {
+      "timeseries": {
+        "key": "idle",
+        "unit": "Percent",
+        "displayname": "Idle percentage"
+      }
+    }
+  ]
+}
